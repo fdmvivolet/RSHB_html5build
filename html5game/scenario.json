@@ -1,0 +1,315 @@
+{
+  "D1_Event_00_Intro": {
+    "eventId": "D1_Event_00_Intro",
+    "type": "Dialogue",
+    "characterId": "Наставник",
+    "rootNode": {
+      "text": "Привет! В этом году урожай рекордный — самим столько не съесть. Соседи просят продать излишки. Какой ты садовод?",
+      "choices": [
+        {
+          "text": "Энергичный",
+          "costEnergy": 0,
+          "reqMoney": 0,
+          "rewardMoney": 0,
+          "deltaReputation": 0,
+          "nextEventId": "D1_Event_00_Tutorial",
+          "effects": ["SET_CLASS_ACTIVE", "CONTINUE"]
+        },
+        {
+          "text": "С накоплениями",
+          "costEnergy": 0,
+          "reqMoney": 0,
+          "rewardMoney": 0,
+          "deltaReputation": 0,
+          "nextEventId": "D1_Event_00_Tutorial",
+          "effects": ["SET_CLASS_WEALTHY", "CONTINUE"]
+        },
+        {
+          "text": "Золотая середина",
+          "costEnergy": 0,
+          "reqMoney": 0,
+          "rewardMoney": 0,
+          "deltaReputation": 0,
+          "nextEventId": "D1_Event_00_Tutorial",
+          "effects": ["SET_CLASS_BALANCED", "CONTINUE"]
+        }
+      ]
+    }
+  },
+
+  "D1_Event_00_Tutorial": {
+      "eventId": "D1_Event_00_Tutorial",
+      "type": "Dialogue",
+      "characterId": "Наставник",
+      "rootNode": {
+        "text": "Отличный выбор! Теперь внимательно следи за ноутбуком на столе. Все новые заказы будут приходить туда в виде уведомлений. Как увидишь восклицательный знак — жми на него!",
+        "choices": [], 
+        "nextEventId": "D1_Event_01_Grandma" 
+      }
+    },
+
+  "D1_Event_01_Grandma": {
+    "eventId": "D1_Event_01_Grandma",
+    "type": "Dialogue",
+    "characterId": "Бабуля",
+    "rootNode": {
+      "text": "Внучок, рассада помидоров совсем померзла. Выручишь? Куплю десяток за 100 рублей.",
+      "choices": [
+        {
+          "text": "Продать",
+          "costEnergy": 10,
+          "reqMoney": 0,
+          "rewardMoney": 100,
+          "deltaReputation": 2,
+          "nextEventId": "D1_Event_02_Petrovich",
+          "effects": ["WORK_PROCESS"]
+        },
+        {
+          "text": "Вежливо отказать",
+          "costEnergy": 10,
+          "reqMoney": 0,
+          "rewardMoney": 0,
+          "deltaReputation": -10,
+          "nextEventId": "D1_Event_02_Petrovich",
+          "effects": []
+        }
+      ]
+    }
+  },
+
+  "D1_Event_02_Petrovich": {
+    "eventId": "D1_Event_02_Petrovich",
+    "type": "Dialogue",
+    "characterId": "Петрович",
+    "rootNode": {
+      "text": "Здорово. Продай саженец твоей яблони? Слышал, сорт хороший. Плачу 1000₽.",
+      "choices": [
+        {
+          "text": "Продать",
+          "costEnergy": 20,
+          "reqMoney": 0,
+          "rewardMoney": 1000,
+          "deltaReputation": 5,
+          "nextEventId": "D1_Event_03_Inspector",
+          "effects": ["WORK_PROCESS"]
+        },
+        {
+          "text": "Извините, не могу помочь.",
+          "costEnergy": 20,
+          "reqMoney": 0,
+          "rewardMoney": 0,
+          "deltaReputation": -15,
+          "nextEventId": "D1_Event_03_Inspector",
+          "effects": []
+        }        
+      ]
+    }
+  },
+
+  "D1_Event_03_Inspector": {
+    "eventId": "D1_Event_03_Inspector",
+    "type": "Dialogue",
+    "characterId": "Инспектор",
+    "rootNode": {
+      "text": "Добрый день! Фиксирую регулярные поступления. Как физлицо вы обязаны платить 13%. Или станьте самозанятым (4%) в приложении.",
+      "choices": [
+        {
+          "text": "Остаться физлицом (13%)",
+          "costEnergy": 0,
+          "reqMoney": 0,
+          "rewardMoney": 0,
+          "deltaReputation": 0,
+          "nextEventId": "D1_Event_04_Inspector",
+          "effects": ["CONTINUE"]
+        },
+        {
+          "text": "Стать самозанятым (4%)",
+          "costEnergy": 0,
+          "reqMoney": 0,
+          "rewardMoney": 0,
+          "deltaReputation": 0,
+          "nextEventId": "D1_Event_04_Inspector",
+          "effects": ["BECOME_SELF_EMPLOYED", "CONTINUE"]
+        }
+      ]
+    }
+  },
+  "D1_Event_04_Inspector": {
+    "eventId": "D1_Event_04_Inspector",
+    "type": "Dialogue",
+    "characterId": "Инспектор",
+    "rootNode": {
+      "text": "И, пожалуйста, не забывайте платить налоги! Иначе вам будут приходить штрафы в размере 50% от заработка.",
+      "choices": [
+        {
+          "text": "Обязательно заплачу!",
+          "costEnergy": 0,
+          "reqMoney": 0,
+          "rewardMoney": 0,
+          "deltaReputation": 0,
+          "effects": ["END_CONVERSATION"]
+        },
+        {
+          "text": "Посмотрим-посмотрим...",
+          "costEnergy": 0,
+          "reqMoney": 0,
+          "rewardMoney": 0,
+          "deltaReputation": 0,
+          "effects": ["END_CONVERSATION"]
+        }        
+      ]
+    }
+  },
+
+  "D2_Event_02_Mom": {
+    "eventId": "D2_Event_02_Mom",
+    "type": "Dialogue",
+    "characterId": "mom",
+    "rootNode": {
+      "text": "Здравствуйте! Очень нужны петунии, но я с малышом, не могу спуститься. Занесете?",
+      "choices": [
+        {
+          "text": "Только самовывоз",
+          "costEnergy": 5,
+          "reqMoney": 0,
+          "rewardMoney": 0,
+          "deltaReputation": -5,
+          "nextEventId": "D2_Event_03_ShadyGuy",
+          "effects": ["WORK_PROCESS"]
+        },
+        {
+          "text": "Конечно, занесу!",
+          "costEnergy": 30,
+          "reqMoney": 0,
+          "rewardMoney": 500,
+          "deltaReputation": 15,
+          "nextEventId": "D2_Event_03_ShadyGuy",
+          "effects": ["WORK_PROCESS"]
+        },
+        {
+          "text": "Сегодня не работаю.",
+          "costEnergy": 30,
+          "reqMoney": 0,
+          "rewardMoney": 0,
+          "deltaReputation": -15,
+          "nextEventId": "D2_Event_03_ShadyGuy",
+          "effects": []
+        }        
+      ]
+    }
+  },
+
+  "D2_Event_03_ShadyGuy": {
+    "eventId": "D2_Event_03_ShadyGuy",
+    "type": "Dialogue",
+    "characterId": "shady",
+    "rootNode": {
+      "text": "Нужны 50 роз срочно. Плачу 5000₽! Но давай переводом на карту брата, без чеков.",
+      "choices": [
+        {
+          "text": "По рукам (В серую)",
+          "costEnergy": 40,
+          "reqMoney": 0,
+          "rewardMoney": 5000,
+          "deltaReputation": -10,
+          "effects": ["RISK_TAKEN", "END_CONVERSATION", "WORK_PROCESS"]
+        },
+        {
+          "text": "Только официально",
+          "costEnergy": 40,
+          "reqMoney": 0,
+          "rewardMoney": 3000,
+          "deltaReputation": 10,
+          "effects": ["END_CONVERSATION", "WORK_PROCESS"]
+        }
+      ]
+    }
+  },
+
+  "D3_Event_ACTIVE": {
+    "eventId": "D3_Event_ACTIVE",
+    "type": "Dialogue",
+    "characterId": "chairman",
+    "rootNode": {
+      "text": "Товарищ! Комиссия едет, а у правления трава по пояс. Выручай, скоси бурьян!",
+      "choices": [
+        {
+          "text": "Выкосить всё",
+          "costEnergy": 50,
+          "reqMoney": 0,
+          "rewardMoney": 4000,
+          "deltaReputation": 10,
+          "nextEventId": "D3_Event_Teacher",
+          "effects": ["WORK_PROCESS"]
+        }
+      ]
+    }
+  },
+
+  "D3_Event_WEALTHY": {
+    "eventId": "D3_Event_WEALTHY",
+    "type": "Dialogue",
+    "characterId": "chef",
+    "rootNode": {
+      "text": "Bonjour! У нас банкет. Срочно нужны 20 кг отборных яблок. Возьмете заказ?",
+      "choices": [
+        {
+          "text": "Продать партию",
+          "costEnergy": 20,
+          "reqMoney": 0,
+          "rewardMoney": 5000,
+          "deltaReputation": 10,
+          "nextEventId": "D3_Event_Teacher",
+          "effects": ["WORK_PROCESS"]
+        }
+      ]
+    }
+  },
+
+  "D3_Event_BALANCED": {
+    "eventId": "D3_Event_BALANCED",
+    "type": "Dialogue",
+    "characterId": "nikolay",
+    "rootNode": {
+      "text": "Привет, сосед! Мы на шашлыки приехали, овощи забыли. Соберешь нам пакет?",
+      "choices": [
+        {
+          "text": "Собрать набор",
+          "costEnergy": 25,
+          "reqMoney": 0,
+          "rewardMoney": 2500,
+          "deltaReputation": 10,
+          "nextEventId": "D3_Event_Teacher",
+          "effects": ["WORK_PROCESS"]
+        }
+      ]
+    }
+  },
+
+  "D3_Event_Teacher": {
+    "eventId": "D3_Event_Teacher",
+    "type": "Dialogue",
+    "characterId": "teacher",
+    "rootNode": {
+      "text": "Завтра открытый урок биологии. Можно у вас купить пару цветов в горшках?",
+      "choices": [
+        {
+          "text": "Продать",
+          "costEnergy": 10,
+          "reqMoney": 0,
+          "rewardMoney": 500,
+          "deltaReputation": 5,
+          "effects": ["WORK_PROCESS","END_CONVERSATION"]
+        },
+        {
+          "text": "Подарить школе",
+          "costEnergy": 10,
+          "reqMoney": 0,
+          "rewardMoney": 0,
+          "deltaReputation": 20,
+          "effects": ["WORK_PROCESS","END_CONVERSATION"]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+ "Classes": [
+ {
+ "id": "ACTIVE",
+ "name": "Энергичный старт",
+ "startMoney": 0,
+ "startEnergy": 120
+ },
+ {
+ "id": "WEALTHY",
+ "name": "Сбережения",
+ "startMoney": 1500,
+ "startEnergy": 80
+ },
+ {
+ "id": "BALANCED",
+ "name": "Золотая середина",
+ "startMoney": 500,
+ "startEnergy": 100
+ }
+ ]
+}
