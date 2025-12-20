@@ -51,7 +51,7 @@
   "D1_Event_01_Grandma": {
     "eventId": "D1_Event_01_Grandma",
     "type": "Dialogue",
-    "characterId": "Бабуля",
+    "characterId": "Бабуля Надя",
     "rootNode": {
       "text": "Внучок, рассада помидоров совсем померзла. Выручишь? Куплю десяток за 100 рублей.",
       "choices": [
@@ -62,7 +62,7 @@
           "rewardMoney": 100,
           "deltaReputation": 2,
           "nextEventId": "D1_Event_02_Petrovich",
-          "effects": ["WORK_PROCESS"]
+          "effects": ["WORK_PROCESS", "FLAG_D1_GRANDMA"]
         },
         {
           "text": "Вежливо отказать",
@@ -80,7 +80,7 @@
   "D1_Event_02_Petrovich": {
     "eventId": "D1_Event_02_Petrovich",
     "type": "Dialogue",
-    "characterId": "Петрович",
+    "characterId": "Сосед Петрович",
     "rootNode": {
       "text": "Здорово. Продай саженец твоей яблони? Слышал, сорт хороший. Плачу 1000₽.",
       "choices": [
@@ -91,7 +91,7 @@
           "rewardMoney": 1000,
           "deltaReputation": 5,
           "nextEventId": "D1_Event_03_Inspector",
-          "effects": ["WORK_PROCESS"]
+          "effects": ["WORK_PROCESS", "FLAG_D1_PETROVICH"]
         },
         {
           "text": "Извините, не могу помочь.",
@@ -109,12 +109,12 @@
   "D1_Event_03_Inspector": {
     "eventId": "D1_Event_03_Inspector",
     "type": "Dialogue",
-    "characterId": "Инспектор",
+    "characterId": "Товарищ инспектор",
     "rootNode": {
       "text": "Добрый день! Фиксирую регулярные поступления. Как физлицо вы обязаны платить 13%. Или станьте самозанятым (4%) в приложении.",
       "choices": [
         {
-          "text": "Остаться физлицом (13%)",
+          "text": "Остаться физлицом",
           "costEnergy": 0,
           "reqMoney": 0,
           "rewardMoney": 0,
@@ -123,7 +123,7 @@
           "effects": ["CONTINUE"]
         },
         {
-          "text": "Стать самозанятым (4%)",
+          "text": "Стать самозанятым",
           "costEnergy": 0,
           "reqMoney": 0,
           "rewardMoney": 0,
@@ -137,7 +137,7 @@
   "D1_Event_04_Inspector": {
     "eventId": "D1_Event_04_Inspector",
     "type": "Dialogue",
-    "characterId": "Инспектор",
+    "characterId": "Товарищ инспектор",
     "rootNode": {
       "text": "И, пожалуйста, не забывайте платить налоги! Иначе вам будут приходить штрафы в размере 50% от заработка.",
       "choices": [
@@ -164,7 +164,7 @@
   "D2_Event_02_Mom": {
     "eventId": "D2_Event_02_Mom",
     "type": "Dialogue",
-    "characterId": "mom",
+    "characterId": "Тётя Люда",
     "rootNode": {
       "text": "Здравствуйте! Очень нужны петунии, но я с малышом, не могу спуститься. Занесете?",
       "choices": [
@@ -184,7 +184,7 @@
           "rewardMoney": 500,
           "deltaReputation": 15,
           "nextEventId": "D2_Event_03_ShadyGuy",
-          "effects": ["WORK_PROCESS"]
+          "effects": ["WORK_PROCESS", "FLAG_D2_MOM"]
         },
         {
           "text": "Сегодня не работаю.",
@@ -202,7 +202,7 @@
   "D2_Event_03_ShadyGuy": {
     "eventId": "D2_Event_03_ShadyGuy",
     "type": "Dialogue",
-    "characterId": "shady",
+    "characterId": "Хитрый Тёма",
     "rootNode": {
       "text": "Нужны 50 роз срочно. Плачу 5000₽! Но давай переводом на карту брата, без чеков.",
       "choices": [
@@ -229,7 +229,7 @@
   "D3_Event_ACTIVE": {
     "eventId": "D3_Event_ACTIVE",
     "type": "Dialogue",
-    "characterId": "chairman",
+    "characterId": "Анатолич",
     "rootNode": {
       "text": "Товарищ! Комиссия едет, а у правления трава по пояс. Выручай, скоси бурьян!",
       "choices": [
@@ -240,7 +240,7 @@
           "rewardMoney": 4000,
           "deltaReputation": 10,
           "nextEventId": "D3_Event_Teacher",
-          "effects": ["WORK_PROCESS"]
+          "effects": ["WORK_PROCESS", "FLAG_D3_SPECIAL"]
         }
       ]
     }
@@ -249,7 +249,7 @@
   "D3_Event_WEALTHY": {
     "eventId": "D3_Event_WEALTHY",
     "type": "Dialogue",
-    "characterId": "chef",
+    "characterId": "Анатолич",
     "rootNode": {
       "text": "Bonjour! У нас банкет. Срочно нужны 20 кг отборных яблок. Возьмете заказ?",
       "choices": [
@@ -260,7 +260,7 @@
           "rewardMoney": 5000,
           "deltaReputation": 10,
           "nextEventId": "D3_Event_Teacher",
-          "effects": ["WORK_PROCESS"]
+          "effects": ["WORK_PROCESS", "FLAG_D3_SPECIAL"]
         }
       ]
     }
@@ -269,7 +269,7 @@
   "D3_Event_BALANCED": {
     "eventId": "D3_Event_BALANCED",
     "type": "Dialogue",
-    "characterId": "nikolay",
+    "characterId": "Анатолич",
     "rootNode": {
       "text": "Привет, сосед! Мы на шашлыки приехали, овощи забыли. Соберешь нам пакет?",
       "choices": [
@@ -280,7 +280,7 @@
           "rewardMoney": 2500,
           "deltaReputation": 10,
           "nextEventId": "D3_Event_Teacher",
-          "effects": ["WORK_PROCESS"]
+          "effects": ["WORK_PROCESS", "FLAG_D3_SPECIAL"]
         }
       ]
     }
@@ -289,7 +289,7 @@
   "D3_Event_Teacher": {
     "eventId": "D3_Event_Teacher",
     "type": "Dialogue",
-    "characterId": "teacher",
+    "characterId": "Татьяна Георгиевна",
     "rootNode": {
       "text": "Завтра открытый урок биологии. Можно у вас купить пару цветов в горшках?",
       "choices": [
@@ -307,7 +307,7 @@
           "reqMoney": 0,
           "rewardMoney": 0,
           "deltaReputation": 20,
-          "effects": ["WORK_PROCESS","END_CONVERSATION"]
+          "effects": ["WORK_PROCESS","END_CONVERSATION", "FLAG_D3_SCHOOL"]
         }
       ]
     }
